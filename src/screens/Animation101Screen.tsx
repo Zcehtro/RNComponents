@@ -19,12 +19,19 @@ export const Animation101Screen = () => {
       easing: Easing.bounce,
     }).start();
   };
-
+  
   const fadeOut = () => {
     Animated.timing(opacity, {
       toValue: 0,
       duration: 300,
       useNativeDriver: true,
+    }).start();
+    
+    Animated.timing(top, {
+      toValue: -100,
+      duration: 700,
+      useNativeDriver: true,
+      easing: Easing.bounce,
     }).start();
   };
 
@@ -50,7 +57,7 @@ export const Animation101Screen = () => {
         }}></Animated.View>
       <Button title="FadeIn" onPress={fadeIn} />
       <Button title="FadeOut" onPress={fadeOut} />
-      <Button title="Reset" onPress={reset} />
+      <Button title="Reset Opacity" onPress={reset} />
     </View>
   );
 };
