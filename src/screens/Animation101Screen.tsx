@@ -16,11 +16,15 @@ export const Animation101Screen = () => {
               translateY: position,
             },
           ],
-        }}></Animated.View>
-      <Button title="FadeIn" onPress={() => {
-        fadeIn();
-        startMovingPosition(-100);
-        }} />
+        }}
+      />
+      <Button
+        title="FadeIn"
+        onPress={() => {
+          fadeIn();
+          startMovingPosition(-100);
+        }}
+      />
       <Button title="FadeOut" onPress={fadeOut} />
     </View>
   );
