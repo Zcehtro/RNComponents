@@ -8,24 +8,22 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
   Keyboard,
+  Text,
 } from "react-native";
 
 import { HeaderTitle } from "@app/components/HeaderTitle";
 import { styles } from "@app/theme/appTheme";
+import { useForm } from "@app/hooks/useForm";
+import { CustomSwitch } from "@app/components/CustomSwitch";
 
 export const TextInputScreen = () => {
-  const [form, setForm] = useState({
+  const { form, onChange, isSubscribed } = useForm({
     name: "",
     email: "",
     phone: "",
+    isSubscribed: false,
   });
 
-  const onChange = (value: string, field: string) => {
-    setForm({
-      ...form,
-      [field]: value,
-    });
-  };
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}>
@@ -46,6 +44,14 @@ export const TextInputScreen = () => {
               onChangeText={value => onChange(value, "email")}
               keyboardType="email-address"
             />
+            <View style={stylesScreen.switchRow}>
+              <Text style={stylesScreen.switchText}>Subscribirse</Text>
+              <CustomSwitch
+                isOn={isSubscribed}
+                onChange={value => onChange(value, "isSubscribed")}
+              />
+            </View>
+
             <HeaderTitle title={JSON.stringify(form, null, 3)} />
             <HeaderTitle title={JSON.stringify(form, null, 3)} />
             <TextInput
@@ -70,5 +76,14 @@ const stylesScreen = StyleSheet.create({
     height: 50,
     paddingHoriztonal: 10,
     borderRadius: 10,
+  },
+  switchText: {
+    fontSize: 25,
+  },
+  switchRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginVertical: 10,
   },
 });
