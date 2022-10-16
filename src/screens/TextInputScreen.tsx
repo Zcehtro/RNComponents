@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   View,
   TextInput,
@@ -61,7 +60,7 @@ export const TextInputScreen = () => {
               keyboardType="phone-pad"
             />
             <HeaderTitle title={JSON.stringify(form, null, 3)} />
-            <View style={{ height: 100 }} />
+            <View style={stylesScreen.emptyView} />
           </View>
         </TouchableWithoutFeedback>
       </ScrollView>
@@ -85,5 +84,8 @@ const stylesScreen = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: 10,
+  },
+  emptyView: {
+    height: 100,
   },
 });

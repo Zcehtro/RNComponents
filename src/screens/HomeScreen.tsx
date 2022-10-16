@@ -1,5 +1,4 @@
-import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { FlatListMenuItem } from '@app/components/FlatListMenuItem';
 
@@ -9,18 +8,10 @@ import { HeaderTitle } from '@app/components/HeaderTitle';
 
 export const HomeScreen = () => {
   const itemSeparator = () => {
-    return (
-      <View
-        style={{
-          borderBottomWidth: 1,
-          opacity: 0.4,
-          marginVertical: 8,
-        }}
-      />
-    );
+    return <View style={stylesHomeScreen.itemSeparator} />;
   };
   return (
-    <View style={{ flex: 1, ...styles.globalMargin }}>
+    <View style={{ ...stylesHomeScreen.flex, ...styles.globalMargin }}>
       <FlatList
         data={menuItems}
         renderItem={({ item }) => <FlatListMenuItem menuItem={item} />}
@@ -31,3 +22,14 @@ export const HomeScreen = () => {
     </View>
   );
 };
+
+const stylesHomeScreen = StyleSheet.create({
+  itemSeparator: {
+    borderBottomWidth: 1,
+    opacity: 0.4,
+    marginVertical: 8,
+  },
+  flex: {
+    flex: 1,
+  },
+});

@@ -1,7 +1,8 @@
 import { CustomSwitch } from '@app/components/CustomSwitch';
 import { HeaderTitle } from '@app/components/HeaderTitle';
 import { useState } from 'react';
-import { View, Switch, Platform, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { styles as stylesGlobal } from '@app/theme/appTheme';
 
 export const SwitchScreen = () => {
   const [state, setState] = useState({
@@ -20,7 +21,7 @@ export const SwitchScreen = () => {
   };
 
   return (
-    <View style={{ marginHorizontal: 20 }}>
+    <View style={stylesGlobal.globalMargin}>
       <HeaderTitle title="Switches" />
       <View style={styles.switchRow}>
         <Text style={styles.switchText}>isActive</Text>
