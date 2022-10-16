@@ -2,6 +2,7 @@ import { AlertScreen } from '@app/screens/AlertScreen';
 import { Animation101Screen } from '@app/screens/Animation101Screen';
 import { Animation102Screen } from '@app/screens/Animation102Screen';
 import { CustomSectionListScreen } from '@app/screens/CustomSectionListScreen';
+import { ModalScreen } from '@app/screens/ModalScreen';
 import { PullToRefreshScreen } from '@app/screens/PullToRefreshScreen';
 import { SwitchScreen } from '@app/screens/SwitchScreen';
 import { TextInputScreen } from '@app/screens/TextInputScreen';
@@ -33,6 +34,7 @@ export const Navigator = () => {
         name="CustomSectionListScreen"
         component={CustomSectionListScreen}
       />
+      <Stack.Screen name="ModalScreen" component={ModalScreen} />
     </Stack.Navigator>
   );
 };
