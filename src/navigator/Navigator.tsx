@@ -1,11 +1,11 @@
-import { AlertScreen } from "@app/screens/AlertScreen";
-import { Animation101Screen } from "@app/screens/Animation101Screen";
-import { Animation102Screen } from "@app/screens/Animation102Screen";
-import { PullToRefreshScreen } from "@app/screens/PullToRefreshScreen";
-import { SwitchScreen } from "@app/screens/SwitchScreen";
-import { TextInputScreen } from "@app/screens/TextInputScreen";
-import { createStackNavigator } from "@react-navigation/stack";
-import { HomeScreen } from "../screens/HomeScreen";
+import { AlertScreen } from '@app/screens/AlertScreen';
+import { Animation101Screen } from '@app/screens/Animation101Screen';
+import { Animation102Screen } from '@app/screens/Animation102Screen';
+import { PullToRefreshScreen } from '@app/screens/PullToRefreshScreen';
+import { SwitchScreen } from '@app/screens/SwitchScreen';
+import { TextInputScreen } from '@app/screens/TextInputScreen';
+import { createStackNavigator } from '@react-navigation/stack';
+import { HomeScreen } from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +15,7 @@ export const Navigator = () => {
       screenOptions={{
         headerShown: false,
         cardStyle: {
-          backgroundColor: "white",
+          backgroundColor: 'white',
         },
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />

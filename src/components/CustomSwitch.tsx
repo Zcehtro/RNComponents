@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Switch, Platform } from "react-native";
+import { useState } from 'react';
+import { Switch, Platform } from 'react-native';
 
 interface Props {
   isOn: boolean;
@@ -16,8 +16,8 @@ export const CustomSwitch = ({ isOn, onChange }: Props) => {
 
   return (
     <Switch
-      trackColor={{ false: "#D9D9DB", true: "#5856D6" }}
-      thumbColor={Platform.OS === "android" ? "#5856D6" : ""}
+      trackColor={{ false: '#D9D9DB', true: '#5856D6' }}
+      thumbColor={Platform.OS === 'android' ? '#5856D6' : ''}
       onValueChange={toggleSwitch}
       value={isEnabled}
     />

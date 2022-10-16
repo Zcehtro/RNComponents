@@ -1,5 +1,5 @@
-import { useAnimation } from "@app/hooks/useAnimation";
-import { StyleSheet, View, Animated, Button } from "react-native";
+import { useAnimation } from '@app/hooks/useAnimation';
+import { StyleSheet, View, Animated, Button } from 'react-native';
 
 export const Animation101Screen = () => {
   const { opacity, position, fadeIn, fadeOut, startMovingPosition } =
@@ -33,11 +33,11 @@ export const Animation101Screen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   purpleBox: {
-    backgroundColor: "#5856D6",
+    backgroundColor: '#5856D6',
     width: 150,
     height: 150,
   },

@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { StyleSheet, Animated, PanResponder, View } from "react-native";
+import { useRef } from 'react';
+import { StyleSheet, Animated, PanResponder, View } from 'react-native';
 
 export const Animation102Screen = () => {
   const pan = useRef(new Animated.ValueXY()).current;
@@ -42,11 +42,11 @@ export const Animation102Screen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   purpleBox: {
-    backgroundColor: "#75CEDB",
+    backgroundColor: '#75CEDB',
     width: 150,
     height: 150,
   },

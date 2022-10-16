@@ -1,6 +1,6 @@
-import { View, Text } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { styles } from "@app/theme/appTheme";
+import { View, Text } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { styles } from '@app/theme/appTheme';
 
 interface Props {
   title: string;

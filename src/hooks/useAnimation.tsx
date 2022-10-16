@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { Animated, Easing } from "react-native";
+import { useRef } from 'react';
+import { Animated, Easing } from 'react-native';
 
 export const useAnimation = () => {
   const opacity = useRef(new Animated.Value(0)).current;
@@ -10,7 +10,7 @@ export const useAnimation = () => {
       toValue: 1,
       duration: 300,
       useNativeDriver: true,
-    }).start(() => console.log("animación terminó"));
+    }).start(() => console.log('animación terminó'));
   };
 
   const fadeOut = () => {

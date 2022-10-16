@@ -1,11 +1,11 @@
-import React from "react";
-import { View } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
-import { FlatListMenuItem } from "@app/components/FlatListMenuItem";
+import React from 'react';
+import { View } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
+import { FlatListMenuItem } from '@app/components/FlatListMenuItem';
 
-import { styles } from "@app/theme/appTheme";
-import { menuItems } from "@app/data/menuItems";
-import { HeaderTitle } from "@app/components/HeaderTitle";
+import { styles } from '@app/theme/appTheme';
+import { menuItems } from '@app/data/menuItems';
+import { HeaderTitle } from '@app/components/HeaderTitle';
 
 export const HomeScreen = () => {
   const itemSeparator = () => {
