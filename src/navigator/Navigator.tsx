@@ -1,6 +1,7 @@
 import { AlertScreen } from '@app/screens/AlertScreen';
 import { Animation101Screen } from '@app/screens/Animation101Screen';
 import { Animation102Screen } from '@app/screens/Animation102Screen';
+import { CustomSectionListScreen } from '@app/screens/CustomSectionListScreen';
 import { PullToRefreshScreen } from '@app/screens/PullToRefreshScreen';
 import { SwitchScreen } from '@app/screens/SwitchScreen';
 import { TextInputScreen } from '@app/screens/TextInputScreen';
@@ -27,6 +28,10 @@ export const Navigator = () => {
       <Stack.Screen
         name="PullToRefreshScreen"
         component={PullToRefreshScreen}
+      />
+      <Stack.Screen
+        name="CustomSectionListScreen"
+        component={CustomSectionListScreen}
       />
     </Stack.Navigator>
   );
