@@ -1,3 +1,4 @@
+import { FadeInImage } from '@app/components/FadeInImage';
 import { HeaderTitle } from '@app/components/HeaderTitle';
 import { styles } from '@app/theme/appTheme';
 import { useState } from 'react';
@@ -25,19 +26,11 @@ export const InfiniteScrollScreen = () => {
   };
 
   const renderItem = (item: number) => {
-    return (
-      <Image
-        source={{ uri: `https://picsum.photos/id/${item}/500/400` }}
-        style={{
-          width: '100%',
-          height: 400,
-        }}
-      />
-    );
+    return <FadeInImage uri={`https://picsum.photos/id/${item}/500/400`} />;
   };
 
   return (
-    <View style={{ ...styles.globalMargin, flex: 1, backgroundColor: 'red' }}>
+    <View style={{ ...styles.globalMargin, flex: 1 }}>
       <FlatList
         data={numbers}
         keyExtractor={item => item.toString()}
