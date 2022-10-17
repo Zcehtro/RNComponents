@@ -4,9 +4,10 @@ import { useState } from 'react';
 
 interface Props {
   uri: string;
+  style?: Object;
 }
 
-export const FadeInImage = ({ uri }: Props) => {
+export const FadeInImage = ({ uri, style }: Props) => {
   const { opacity, fadeIn } = useAnimation();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -32,8 +33,7 @@ export const FadeInImage = ({ uri }: Props) => {
         source={{ uri }}
         onLoadEnd={finishLoading}
         style={{
-          width: '100%',
-          height: 400,
+          ...style,
           opacity,
         }}
       />
